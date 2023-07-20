@@ -15,39 +15,18 @@
     <link href="{{ asset(config('app.theme.path').'dist/css/tabler-vendors.min.css?1674944402') }}" rel="stylesheet"/>
     <link href="{{ asset(config('app.theme.path').'dist/css/demo.min.css?1674944402') }}" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-    <style>
-        @import url('https://rsms.me/inter/inter.css');
-
-        :root {
-            --tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
-        }
-
-        body {
-            font-feature-settings: "cv03", "cv04", "cv11";
-        }
-    </style>
+        <style>
+            @import url('https://rsms.me/inter/inter.css');
+            :root {
+                --tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+            }
+            body {
+                font-feature-settings: "cv03", "cv04", "cv11";
+            }
+        </style>
     <!-- Scripts -->
     @vite(['resources/sass/app.scss','resources/js/app.js'])
     @stack('css')
-    <style>
-        [data-bs-theme=dark] .page {
-            background-color: #1a1a1a;
-        }
-
-        [data-bs-theme=dark] .dropdown-header{
-            color: whitesmoke;
-        }
-
-        [data-bs-theme=dark] .dropdown-menu,
-        [data-bs-theme=dark] .card {
-            background: #393939;
-        }
-        [data-bs-theme=dark] .navbar {
-            background: #131313;
-
-            box-shadow: inset 0 calc(-1 * 1px) 0 0 #333;
-        }
-    </style>
 </head>
 <body>
 <script src="{{ asset(config('app.theme.path').'dist/js/demo-theme.min.js') }}"></script>
@@ -73,20 +52,18 @@
                             <x-utilities.switch-user></x-utilities.switch-user>
                         @endif
 
-                        {{--                        <a href="https://github.com/nejcc/laravelplus" class="btn btn-dark" target="_blank"--}}
-                        {{--                           rel="noreferrer">--}}
-                        {{--                            <i class="ti ti-brand-github"></i> {{ __('Source code') }}--}}
-                        {{--                        </a>--}}
-                        {{--                        <a href="https://github.com/sponsors/nejcc" class="btn btn-dark" target="_blank"--}}
-                        {{--                           rel="noreferrer">--}}
-                        {{--                            <i class="ti ti-heart"></i> {{ __('Sponsor') }}--}}
-                        {{--                        </a>--}}
+{{--                        <a href="https://github.com/nejcc/laravelplus" class="btn btn-dark" target="_blank"--}}
+{{--                           rel="noreferrer">--}}
+{{--                            <i class="ti ti-brand-github"></i> {{ __('Source code') }}--}}
+{{--                        </a>--}}
+{{--                        <a href="https://github.com/sponsors/nejcc" class="btn btn-dark" target="_blank"--}}
+{{--                           rel="noreferrer">--}}
+{{--                            <i class="ti ti-heart"></i> {{ __('Sponsor') }}--}}
+{{--                        </a>--}}
                     </div>
                 </div>
                 <div class="d-none d-md-flex">
-
-                    {{--                    <x-locale></x-locale>--}}
-
+                    <x-locale></x-locale>
                     <a href="?theme=dark" class="nav-link px-0 mt-1 hide-theme-dark" title="Enable dark mode"
                        data-bs-toggle="tooltip"
                        data-bs-placement="bottom">
@@ -121,31 +98,17 @@
                         <div class="d-none d-xl-block ps-2">
                             @if (auth()->check())
                                 <div>{{ auth()->user()->email ?? '---' }}</div>
-                                <div
-                                    class="mt-1 small text-muted">{{ ucfirst(auth()->user()->getRoleNames()[0] ?? '---') }}</div>
+                                <div class="mt-1 small text-muted">{{ ucfirst(auth()->user()->getRoleNames()[0] ?? '---') }}</div>
                             @endif
                         </div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                         <h6 class="dropdown-header">Dropdown header</h6>
-                        <a href="#" class="dropdown-item">
-                            <!-- Download SVG icon from http://tabler-icons.io/i/activity -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon dropdown-item-icon" width="24"
-                                 height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                 stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M3 12h4l3 8l4 -16l3 8h4"/>
-                            </svg>
+                        <a href="#" class="dropdown-item"><!-- Download SVG icon from http://tabler-icons.io/i/activity -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon dropdown-item-icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12h4l3 8l4 -16l3 8h4" /></svg>
                             Item 1</a>
                         <a href="#" class="dropdown-item"><!-- Download SVG icon from http://tabler-icons.io/i/edit -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon dropdown-item-icon" width="24"
-                                 height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                 stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"/>
-                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z"/>
-                                <path d="M16 5l3 3"/>
-                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon dropdown-item-icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" /><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" /><path d="M16 5l3 3" /></svg>
                             Item 2</a>
                         <div class="dropdown-item">
                             <a href="#" class="text-reset">My profile</a>
@@ -155,53 +118,42 @@
                             </label>
                         </div>
                         <label class="dropdown-item"><input class="form-check-input m-0 me-2" type="radio"> Radio input</label>
-                        <label class="dropdown-item"><input class="form-check-input m-0 me-2" type="checkbox"> Checkbox
-                            input</label>
-                        <label class="dropdown-item form-switch"><input class="form-check-input m-0 me-2"
-                                                                        type="checkbox"> Checkbox input</label>
+                        <label class="dropdown-item"><input class="form-check-input m-0 me-2" type="checkbox"> Checkbox input</label>
+                        <label class="dropdown-item form-switch"><input class="form-check-input m-0 me-2" type="checkbox"> Checkbox input</label>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">Dropdown item 1</a>
                         <a href="#" class="dropdown-item">Dropdown item 2</a>
                         <a href="#" class="dropdown-item disabled">Dropdown disabled</a>
                         <a href="#" class="dropdown-item active">Dropdown active</a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item"><span class="avatar avatar-xs rounded me-2"
-                                                                style="background-image: url(./static/avatars/000m.jpg)"></span>
+                        <a href="#" class="dropdown-item"><span class="avatar avatar-xs rounded me-2" style="background-image: url(./static/avatars/000m.jpg)"></span>
                             Paweł Kuna</a>
                         <a href="#" class="dropdown-item"><span class="avatar avatar-xs rounded me-2">JL</span>
                             Jeffie Lewzey</a>
-                        <a href="#" class="dropdown-item"><span class="avatar avatar-xs rounded me-2"
-                                                                style="background-image: url(./static/avatars/002m.jpg)"></span>
+                        <a href="#" class="dropdown-item"><span class="avatar avatar-xs rounded me-2" style="background-image: url(./static/avatars/002m.jpg)"></span>
                             Mallory Hulme</a>
                         <div class="dropdown-divider"></div>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button class="dropdown-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon dropdown-item-icon" width="24"
-                                     height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                     stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                    <path
-                                        d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"/>
-                                    <path d="M7 12h14l-3 -3m0 6l3 -3"/>
-                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon dropdown-item-icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" /><path d="M7 12h14l-3 -3m0 6l3 -3" /></svg>
                                 {{ __('Logout') }}
                             </button>
                         </form>
                     </div>
-                    {{--                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">--}}
-                    {{--                        <a href="#" class="dropdown-item">Status</a>--}}
-                    {{--                        <a href="./profile.html" class="dropdown-item">Profile</a>--}}
-                    {{--                        <a href="#" class="dropdown-item">Feedback</a>--}}
-                    {{--                        <div class="dropdown-divider"></div>--}}
-                    {{--                        <a href="./settings.html" class="dropdown-item">Settings</a>--}}
-                    {{--                        <form id="logout-form" action="{{ route('logout') }}" method="POST">--}}
-                    {{--                            @csrf--}}
-                    {{--                            <button class="dropdown-item">--}}
-                    {{--                                {{ __('Logout') }}--}}
-                    {{--                            </button>--}}
-                    {{--                        </form>--}}
-                    {{--                    </div>--}}
+{{--                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">--}}
+{{--                        <a href="#" class="dropdown-item">Status</a>--}}
+{{--                        <a href="./profile.html" class="dropdown-item">Profile</a>--}}
+{{--                        <a href="#" class="dropdown-item">Feedback</a>--}}
+{{--                        <div class="dropdown-divider"></div>--}}
+{{--                        <a href="./settings.html" class="dropdown-item">Settings</a>--}}
+{{--                        <form id="logout-form" action="{{ route('logout') }}" method="POST">--}}
+{{--                            @csrf--}}
+{{--                            <button class="dropdown-item">--}}
+{{--                                {{ __('Logout') }}--}}
+{{--                            </button>--}}
+{{--                        </form>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>
@@ -213,9 +165,9 @@
         @yield('header')
         @yield('content')
 
-        {{--        @if(config('theme.has.footer'))--}}
-        {{--            <x-footer.general></x-footer.general>--}}
-        {{--        @endif--}}
+        @if(config('theme.has.footer'))
+            <x-footer.general></x-footer.general>
+        @endif
     </div>
     @yield('modals')
 </div>
