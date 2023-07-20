@@ -30,6 +30,17 @@
     @vite(['resources/sass/app.scss','resources/js/app.js'])
     @stack('css')
     <style>
+        [data-bs-theme=dark] .btn-action:active,
+        [data-bs-theme=dark] .btn-action:focus,
+        [data-bs-theme=dark] .btn-action:hover{
+            background: #222323;
+        }
+
+        [data-bs-theme=dark] .navbar .avatar,
+        [data-bs-theme=dark] .form-control {
+            background: #1a1b1b;
+        }
+
         [data-bs-theme=dark] .page {
             background-color: #1a1a1a;
         }
@@ -42,6 +53,7 @@
         [data-bs-theme=dark] .card {
             background: #393939;
         }
+
         [data-bs-theme=dark] .navbar {
             background: #131313;
 
@@ -62,7 +74,7 @@
             <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
                 <a href="{{ route('home') }}">
                     {{--                    <img src="" width="110" height="32" alt="logo" class="navbar-brand-image">--}}
-                    <h2 class="mt-2">{{ config('app.name') }}</h2>
+                    {{ 'Dashy' ?? config('app.name') }}
                 </a>
             </h1>
             <div class="navbar-nav flex-row order-md-last">

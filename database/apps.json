@@ -1,0 +1,136 @@
+{
+    "Virtualization": [
+        {
+            "name": "Proxmox",
+            "url": "https://www.proxmox.com/",
+            "icon": "https://www.proxmox.com/templates/yoo_nano2/favicon.ico",
+            "tags": [
+                "virtualization"
+            ]
+        },{
+            "name": "Proxmox 2",
+            "url": "https://www.proxmox.com/",
+            "icon": "https://www.proxmox.com/templates/yoo_nano2/favicon.ico",
+            "tags": [
+                "virtualization"
+            ]
+        },{
+            "name": "Proxmox 3",
+            "url": "https://www.proxmox.com/",
+            "icon": "https://www.proxmox.com/templates/yoo_nano2/favicon.ico",
+            "tags": [
+                "virtualization"
+            ]
+        }
+    ],
+    "Home Automation": [
+        {
+            "name": "Phoscon",
+            "url": "https://phoscon.de",
+            "icon": "https://phoscon.de/img/favicon/favicon-96x96.png",
+            "tags": [
+                "home automation"
+            ]
+        },
+        {
+            "name": "Home Assistant",
+            "url": "https://www.home-assistant.io/",
+            "icon": "https://www.home-assistant.io/images/favicon-192x192.png",
+            "tags": [
+                "home automation",
+                "self-hosted"
+            ]
+        }
+    ],
+    "Services": [
+        {
+            "name": "Nextcloud",
+            "url": "https://nextcloud.com/",
+            "icon": "https://nextcloud.com/wp-content/uploads/2022/03/favicon.png",
+            "tags": [
+                "self-hosted",
+                "cloud"
+            ]
+        },
+        {
+            "name": "Bitwarden",
+            "url": "https://bitwarden.com/",
+            "icon": "https://bitwarden.com/icons/icon-192x192.png?v=1abf57d1154002a9fac426a2c5c04d85",
+            "tags": [
+                "self-hosted",
+                "password manager"
+            ]
+        }
+    ],
+    "System": [
+        {
+            "name": "PiKVM",
+            "url": "https://pikvm.org/",
+            "icon": "https://pikvm.org/img/apple-touch-icon.png",
+            "tags": [
+                "virtualization"
+            ]
+        },
+        {
+            "name": "Jackett",
+            "url": "https://github.com/Jackett/Jackett",
+            "icon": "https://avatars.githubusercontent.com/u/15383019?s=48&v=4",
+            "tags": [
+                "essentials",
+                "media"
+            ]
+        }
+    ],
+    "Media": [
+        {
+            "name": "Jellyfin",
+            "url": "https://jellyfin.org/",
+            "icon": "https://jellyfin.org/images/favicon.ico",
+            "tags": [
+                "self-hosted",
+                "media"
+            ]
+        },
+        {
+            "name": "Plex",
+            "url": "https://www.plex.tv/",
+            "icon": "https://www.plex.tv/wp-content/themes/plex/assets/img/favicons/plex-180.png",
+            "tags": [
+                "media"
+            ]
+        }
+    ],
+    "Favorite Websites": [
+        {
+            "name": "Tabler.io",
+            "url": "https://tabler.io/",
+            "icon": "https://tabler.io/favicons/apple-touch-icon-180x180.png",
+            "tags": [
+                "essentials",
+                "self-hosted"
+            ]
+        }
+    ],
+    "Torrents": [
+        {
+            "name": "Tabler.io",
+            "url": "https://tabler.io/",
+            "icon": "https://tabler.io/favicons/apple-touch-icon-180x180.png",
+            "tags": [
+                "essentials",
+                "self-hosted"
+            ]
+        }
+    ],
+    "Network": [
+        {
+            "name": "NetBox",
+            "url": "https://github.com/netbox-community/netbox",
+            "icon": "https://raw.githubusercontent.com/wiki/netbox-community/netbox/images/deploy/deploy1.png",
+            "tags": [
+                "self-hosted",
+                "network"
+            ]
+        }
+    ]
+}
