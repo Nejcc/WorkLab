@@ -195,6 +195,22 @@
             "description": "Previous iteration of Proxmox platform for VM & container management."
         }
     ],
+    "Monitoring": [
+        {
+            "name": "Grafana",
+            "url": "https://grafana.com/",
+            "icon": "https://grafana.com/static/img/fav32.png",
+            "tags": ["monitoring", "self-hosted"],
+            "description": "Self-hosted platform for visualizing & monitoring time-series data."
+        },
+        {
+            "name": "Uptime Kuma",
+            "url": "https://github.com/louislam/uptime-kuma",
+            "icon": "https://github.com/louislam/uptime-kuma/raw/main/static/icons/android-chrome-512x512.png",
+            "tags": ["monitoring", "self-hosted"],
+            "description": "Self-hosted monitoring solution to track website & service uptime."
+        }
+    ],
     "Additional Links": [
         {
             "name": "Overseerr",
@@ -209,13 +225,6 @@
             "icon": "https://documentation.portainer.io/docs/assets/favicon.ico",
             "tags": ["essentials", "self-hosted"],
             "description": "Portainer Backup provides a method to create and manage backups of your Portainer data and settings for easy restoration."
-        },
-        {
-            "name": "Uptime Kuma",
-            "url": "https://github.com/louislam/uptime-kuma",
-            "icon": "https://github.com/louislam/uptime-kuma/raw/main/static/icons/android-chrome-512x512.png",
-            "tags": ["essentials", "self-hosted"],
-            "description": "Self-hosted monitoring solution to track website & service uptime."
         }
     ]
 }
