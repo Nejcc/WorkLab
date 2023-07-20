@@ -47,11 +47,6 @@
 @section('content')
     <div class="container-xl">
         <div class="row">
-            @php
-                $dashboard = json_decode(file_get_contents(database_path('apps.json')));
-//                var_dump($dashboard);
-//                exit();
-            @endphp
             @foreach($dashboard as $key => $data)
                 @if (count($data) == 0)
                     @continue

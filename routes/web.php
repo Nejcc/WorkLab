@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', fn () => view('welcome'))->name('welcome');
+//Route::get('/', fn () => view('welcome'))->name('welcome');
+
+Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
 
 Route::get('/locale/{locale}', \App\Http\Controllers\LocaleController::class)->name('set.locale');
 
@@ -26,6 +28,7 @@ Route::get('login/github/callback', [\App\Http\Controllers\Auth\SocialiteLoginCo
 
 //Route::get('login/facebook', 'Auth\LoginController@redirectToFacebookProvider');
 //Route::get('login/facebook/callback', 'Auth\LoginController@handleFacebookProviderCallback');
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/tos', [App\Http\Controllers\HomeController::class, 'index'])->name('tos');

@@ -1,34 +1,5 @@
 {
-    "Storage": [
-        {
-            "name": "TrueNAS",
-            "url": "https://www.truenas.com/",
-            "icon": "https://www.truenas.com/img/favicon.png",
-            "tags": ["storage"],
-            "description": "Powerful storage OS for building & managing network-attached storage (NAS) solutions."
-        },
-        {
-            "name": "Synology",
-            "url": "https://www.synology.com/",
-            "icon": "https://global.download.synology.com/download/img/favicon_64x64.ico",
-            "tags": ["storage"],
-            "description": "NAS devices & software solutions for file storage, backup & media streaming."
-        },
-        {
-            "name": "Syncthing",
-            "url": "https://syncthing.net/",
-            "icon": "https://syncthing.net/favicon-32x32.png",
-            "tags": ["storage"],
-            "description": "Self-hosted, decentralized file sync tool for secure data syncing across devices."
-        },
-        {
-            "name": "Longhorn",
-            "url": "https://longhorn.io/",
-            "icon": "https://longhorn.io/icons/icon-96x96.png",
-            "tags": ["storage"],
-            "description": "Cloud-native distributed block storage for simplified data persistence in Kubernetes."
-        }
-    ],
+
     "Network": [
         {
             "name": "Traefik",
@@ -71,84 +42,6 @@
             "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/IPMI_logo.svg/1200px-IPMI_logo.svg.png",
             "tags": ["network"],
             "description": "Standardized computer interface for remote server management."
-        }
-    ],
-    "Encryptions": [
-        {
-            "name": "Bitwarden",
-            "url": "https://bitwarden.com/",
-            "icon": "https://bitwarden.com/icons/icon-192x192.png?v=1abf57d1154002a9fac426a2c5c04d85",
-            "tags": ["self-hosted", "encryption", "password manager"],
-            "description": "Secure self-hosted password manager for managing passwords & sensitive data."
-        },
-        {
-            "name": "Passbolt",
-            "url": "https://passbolt.com/",
-            "icon": "https://www.passbolt.com/favicon.ico",
-            "tags": ["self-hosted", "encryption", "password manager"],
-            "description": "Self-hosted password manager with built-in encryption for secure sharing."
-        }
-    ],
-    "Media": [
-        {
-            "name": "Sonarr",
-            "url": "https://sonarr.tv/",
-            "icon": "https://sonarr.tv/favicon-32x32.png",
-            "tags": ["media"],
-            "description": "Self-hosted TV series management & automation platform for downloading shows."
-        },
-        {
-            "name": "Radarr",
-            "url": "https://radarr.video/",
-            "icon": "https://radarr.video/favicon.ico",
-            "tags": ["media"],
-            "description": "Self-hosted movie management & automation platform for tracking movies."
-        },
-        {
-            "name": "Plex",
-            "url": "https://www.plex.tv/",
-            "icon": "https://www.plex.tv/wp-content/themes/plex/assets/img/favicons/plex-180.png",
-            "tags": ["media"],
-            "description": "Media streaming platform for organizing & accessing your media collection."
-        },
-        {
-            "name": "Jellyfin",
-            "url": "https://jellyfin.org/",
-            "icon": "https://jellyfin.org/images/favicon.ico",
-            "tags": ["media"],
-            "description": "Self-hosted media server for streaming & organizing your personal media."
-        }
-    ],
-    "Services": [
-        {
-            "name": "Bitwarden",
-            "url": "https://bitwarden.com/",
-            "icon": "https://bitwarden.com/icons/icon-192x192.png?v=1abf57d1154002a9fac426a2c5c04d85",
-            "tags": ["self-hosted", "password manager"],
-            "description": "Secure self-hosted password manager for managing passwords & sensitive data."
-        },
-        {
-            "name": "Nextcloud",
-            "url": "https://nextcloud.com/",
-            "icon": "https://nextcloud.com/wp-content/uploads/2022/03/favicon.png",
-            "tags": ["self-hosted", "cloud"],
-            "description": "Self-hosted cloud storage & collaboration platform for files & data."
-        }
-    ],
-    "Home Automation": [
-        {
-            "name": "Home Assistant",
-            "url": "https://www.home-assistant.io/",
-            "icon": "https://www.home-assistant.io/images/favicon-192x192.png",
-            "tags": ["home automation", "self-hosted"],
-            "description": "Self-hosted automation platform for controlling & managing smart devices."
-        },
-        {
-            "name": "Phoscon",
-            "url": "https://phoscon.de",
-            "icon": "https://phoscon.de/img/favicon/favicon-96x96.png",
-            "tags": ["home automation"],
-            "description": "Home automation gateway software for controlling & managing smart devices."
         }
     ],
     "Virtualization": [
@@ -195,6 +88,115 @@
             "description": "Previous iteration of Proxmox platform for VM & container management."
         }
     ],
+    "Storage": [
+        {
+            "name": "TrueNAS",
+            "url": "https://www.truenas.com/",
+            "icon": "https://www.truenas.com/img/favicon.png",
+            "tags": ["storage"],
+            "description": "Powerful storage OS for building & managing network-attached storage (NAS) solutions."
+        },
+        {
+            "name": "Synology",
+            "url": "https://www.synology.com/",
+            "icon": "https://global.download.synology.com/download/img/favicon_64x64.ico",
+            "tags": ["storage"],
+            "description": "NAS devices & software solutions for file storage, backup & media streaming."
+        },
+        {
+            "name": "Syncthing",
+            "url": "https://syncthing.net/",
+            "icon": "https://syncthing.net/favicon-32x32.png",
+            "tags": ["storage"],
+            "description": "Self-hosted, decentralized file sync tool for secure data syncing across devices."
+        },
+        {
+            "name": "Longhorn",
+            "url": "https://longhorn.io/",
+            "icon": "https://longhorn.io/icons/icon-96x96.png",
+            "tags": ["storage"],
+            "description": "Cloud-native distributed block storage for simplified data persistence in Kubernetes."
+        }
+    ],
+    "Media": [
+        {
+            "name": "Sonarr",
+            "url": "https://sonarr.tv/",
+            "icon": "https://sonarr.tv/favicon-32x32.png",
+            "tags": ["media"],
+            "description": "Self-hosted TV series management & automation platform for downloading shows."
+        },
+        {
+            "name": "Radarr",
+            "url": "https://radarr.video/",
+            "icon": "https://radarr.video/favicon.ico",
+            "tags": ["media"],
+            "description": "Self-hosted movie management & automation platform for tracking movies."
+        },
+        {
+            "name": "Plex",
+            "url": "https://www.plex.tv/",
+            "icon": "https://www.plex.tv/wp-content/themes/plex/assets/img/favicons/plex-180.png",
+            "tags": ["media"],
+            "description": "Media streaming platform for organizing & accessing your media collection."
+        },
+        {
+            "name": "Jellyfin",
+            "url": "https://jellyfin.org/",
+            "icon": "https://jellyfin.org/images/favicon.ico",
+            "tags": ["media"],
+            "description": "Self-hosted media server for streaming & organizing your personal media."
+        }
+    ],
+
+    "Encryptions": [
+        {
+            "name": "Bitwarden",
+            "url": "https://bitwarden.com/",
+            "icon": "https://bitwarden.com/icons/icon-192x192.png?v=1abf57d1154002a9fac426a2c5c04d85",
+            "tags": ["self-hosted", "encryption", "password manager"],
+            "description": "Secure self-hosted password manager for managing passwords & sensitive data."
+        },
+        {
+            "name": "Passbolt",
+            "url": "https://passbolt.com/",
+            "icon": "https://www.passbolt.com/favicon.ico",
+            "tags": ["self-hosted", "encryption", "password manager"],
+            "description": "Self-hosted password manager with built-in encryption for secure sharing."
+        }
+    ],
+    "Services": [
+        {
+            "name": "Bitwarden",
+            "url": "https://bitwarden.com/",
+            "icon": "https://bitwarden.com/icons/icon-192x192.png?v=1abf57d1154002a9fac426a2c5c04d85",
+            "tags": ["self-hosted", "password manager"],
+            "description": "Secure self-hosted password manager for managing passwords & sensitive data."
+        },
+        {
+            "name": "Nextcloud",
+            "url": "https://nextcloud.com/",
+            "icon": "https://nextcloud.com/wp-content/uploads/2022/03/favicon.png",
+            "tags": ["self-hosted", "cloud"],
+            "description": "Self-hosted cloud storage & collaboration platform for files & data."
+        }
+    ],
+    "Home Automation": [
+        {
+            "name": "Home Assistant",
+            "url": "https://www.home-assistant.io/",
+            "icon": "https://www.home-assistant.io/images/favicon-192x192.png",
+            "tags": ["home automation", "self-hosted"],
+            "description": "Self-hosted automation platform for controlling & managing smart devices."
+        },
+        {
+            "name": "Phoscon",
+            "url": "https://phoscon.de",
+            "icon": "https://phoscon.de/img/favicon/favicon-96x96.png",
+            "tags": ["home automation"],
+            "description": "Home automation gateway software for controlling & managing smart devices."
+        }
+    ],
     "Monitoring": [
         {
             "name": "Grafana",
@@ -211,6 +213,7 @@
             "description": "Self-hosted monitoring solution to track website & service uptime."
         }
     ],
+
     "Additional Links": [
         {
             "name": "Overseerr",
