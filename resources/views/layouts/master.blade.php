@@ -30,6 +30,11 @@
     @vite(['resources/sass/app.scss','resources/js/app.js'])
     @stack('css')
     <style>
+        [data-bs-theme=dark] .btn-primary:hover{
+            background: #313333;
+        }
+
+        [data-bs-theme=dark] .btn-primary,
         [data-bs-theme=dark] .btn-action:active,
         [data-bs-theme=dark] .btn-action:focus,
         [data-bs-theme=dark] .btn-action:hover{

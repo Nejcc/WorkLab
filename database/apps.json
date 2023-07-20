@@ -1,136 +1,221 @@
 {
-    "Virtualization": [
+    "Storage": [
         {
-            "name": "Proxmox",
-            "url": "https://www.proxmox.com/",
-            "icon": "https://www.proxmox.com/templates/yoo_nano2/favicon.ico",
-            "tags": [
-                "virtualization"
-            ]
-        },{
-            "name": "Proxmox 2",
-            "url": "https://www.proxmox.com/",
-            "icon": "https://www.proxmox.com/templates/yoo_nano2/favicon.ico",
-            "tags": [
-                "virtualization"
-            ]
-        },{
-            "name": "Proxmox 3",
-            "url": "https://www.proxmox.com/",
-            "icon": "https://www.proxmox.com/templates/yoo_nano2/favicon.ico",
-            "tags": [
-                "virtualization"
-            ]
-        }
-    ],
-    "Home Automation": [
-        {
-            "name": "Phoscon",
-            "url": "https://phoscon.de",
-            "icon": "https://phoscon.de/img/favicon/favicon-96x96.png",
-            "tags": [
-                "home automation"
-            ]
+            "name": "TrueNAS",
+            "url": "https://www.truenas.com/",
+            "icon": "https://www.truenas.com/img/favicon.png",
+            "tags": ["storage"],
+            "description": "Powerful storage OS for building & managing network-attached storage (NAS) solutions."
         },
         {
-            "name": "Home Assistant",
-            "url": "https://www.home-assistant.io/",
-            "icon": "https://www.home-assistant.io/images/favicon-192x192.png",
-            "tags": [
-                "home automation",
-                "self-hosted"
-            ]
+            "name": "Synology",
+            "url": "https://www.synology.com/",
+            "icon": "https://global.download.synology.com/download/img/favicon_64x64.ico",
+            "tags": ["storage"],
+            "description": "NAS devices & software solutions for file storage, backup & media streaming."
+        },
+        {
+            "name": "Syncthing",
+            "url": "https://syncthing.net/",
+            "icon": "https://syncthing.net/favicon-32x32.png",
+            "tags": ["storage"],
+            "description": "Self-hosted, decentralized file sync tool for secure data syncing across devices."
+        },
+        {
+            "name": "Longhorn",
+            "url": "https://longhorn.io/",
+            "icon": "https://longhorn.io/icons/icon-96x96.png",
+            "tags": ["storage"],
+            "description": "Cloud-native distributed block storage for simplified data persistence in Kubernetes."
         }
     ],
-    "Services": [
+    "Network": [
         {
-            "name": "Nextcloud",
-            "url": "https://nextcloud.com/",
-            "icon": "https://nextcloud.com/wp-content/uploads/2022/03/favicon.png",
-            "tags": [
-                "self-hosted",
-                "cloud"
-            ]
+            "name": "Traefik",
+            "url": "https://traefik.io/",
+            "icon": "https://traefik.io/traefik.ico",
+            "tags": ["network"],
+            "description": "Modern reverse proxy & load balancer for deploying & managing containerized apps."
         },
+        {
+            "name": "Unifi",
+            "url": "https://www.ui.com/",
+            "icon": "https://www.ui.com/favicon-32x32.png",
+            "tags": ["network"],
+            "description": "Networking products, including routers, switches & access points."
+        },
+        {
+            "name": "pfSense",
+            "url": "https://www.pfsense.org/",
+            "icon": "https://www.pfsense.org/apple-touch-icon.png",
+            "tags": ["network"],
+            "description": "Open-source firewall & router software for advanced networking & security."
+        },
+        {
+            "name": "NetBox",
+            "url": "https://github.com/netbox-community/netbox",
+            "icon": "https://raw.githubusercontent.com/wiki/netbox-community/netbox/images/deploy/deploy1.png",
+            "tags": ["network"],
+            "description": "Open-source IP address management (IPAM) & data center infrastructure management (DCIM) solution."
+        },
+        {
+            "name": "Pi-hole",
+            "url": "https://pi-hole.net/",
+            "icon": "https://wp-cdn.pi-hole.net/wp-content/uploads/2016/12/Vortex-R.png",
+            "tags": ["network", "dns"],
+            "description": "Self-hosted network-wide ad blocker for protecting devices from ads & trackers."
+        },
+        {
+            "name": "IPMI",
+            "url": "https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface",
+            "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/IPMI_logo.svg/1200px-IPMI_logo.svg.png",
+            "tags": ["network"],
+            "description": "Standardized computer interface for remote server management."
+        }
+    ],
+    "Encryptions": [
         {
             "name": "Bitwarden",
             "url": "https://bitwarden.com/",
             "icon": "https://bitwarden.com/icons/icon-192x192.png?v=1abf57d1154002a9fac426a2c5c04d85",
-            "tags": [
-                "self-hosted",
-                "password manager"
-            ]
-        }
-    ],
-    "System": [
-        {
-            "name": "PiKVM",
-            "url": "https://pikvm.org/",
-            "icon": "https://pikvm.org/img/apple-touch-icon.png",
-            "tags": [
-                "virtualization"
-            ]
+            "tags": ["self-hosted", "encryption", "password manager"],
+            "description": "Secure self-hosted password manager for managing passwords & sensitive data."
         },
         {
-            "name": "Jackett",
-            "url": "https://github.com/Jackett/Jackett",
-            "icon": "https://avatars.githubusercontent.com/u/15383019?s=48&v=4",
-            "tags": [
-                "essentials",
-                "media"
-            ]
+            "name": "Passbolt",
+            "url": "https://passbolt.com/",
+            "icon": "https://www.passbolt.com/favicon.ico",
+            "tags": ["self-hosted", "encryption", "password manager"],
+            "description": "Self-hosted password manager with built-in encryption for secure sharing."
         }
     ],
     "Media": [
         {
-            "name": "Jellyfin",
-            "url": "https://jellyfin.org/",
-            "icon": "https://jellyfin.org/images/favicon.ico",
-            "tags": [
-                "self-hosted",
-                "media"
-            ]
+            "name": "Sonarr",
+            "url": "https://sonarr.tv/",
+            "icon": "https://sonarr.tv/favicon-32x32.png",
+            "tags": ["media"],
+            "description": "Self-hosted TV series management & automation platform for downloading shows."
+        },
+        {
+            "name": "Radarr",
+            "url": "https://radarr.video/",
+            "icon": "https://radarr.video/favicon.ico",
+            "tags": ["media"],
+            "description": "Self-hosted movie management & automation platform for tracking movies."
         },
         {
             "name": "Plex",
             "url": "https://www.plex.tv/",
             "icon": "https://www.plex.tv/wp-content/themes/plex/assets/img/favicons/plex-180.png",
-            "tags": [
-                "media"
-            ]
+            "tags": ["media"],
+            "description": "Media streaming platform for organizing & accessing your media collection."
+        },
+        {
+            "name": "Jellyfin",
+            "url": "https://jellyfin.org/",
+            "icon": "https://jellyfin.org/images/favicon.ico",
+            "tags": ["media"],
+            "description": "Self-hosted media server for streaming & organizing your personal media."
         }
     ],
-    "Favorite Websites": [
+    "Services": [
         {
-            "name": "Tabler.io",
-            "url": "https://tabler.io/",
-            "icon": "https://tabler.io/favicons/apple-touch-icon-180x180.png",
-            "tags": [
-                "essentials",
-                "self-hosted"
-            ]
+            "name": "Bitwarden",
+            "url": "https://bitwarden.com/",
+            "icon": "https://bitwarden.com/icons/icon-192x192.png?v=1abf57d1154002a9fac426a2c5c04d85",
+            "tags": ["self-hosted", "password manager"],
+            "description": "Secure self-hosted password manager for managing passwords & sensitive data."
+        },
+        {
+            "name": "Nextcloud",
+            "url": "https://nextcloud.com/",
+            "icon": "https://nextcloud.com/wp-content/uploads/2022/03/favicon.png",
+            "tags": ["self-hosted", "cloud"],
+            "description": "Self-hosted cloud storage & collaboration platform for files & data."
         }
     ],
-    "Torrents": [
+    "Home Automation": [
         {
-            "name": "Tabler.io",
-            "url": "https://tabler.io/",
-            "icon": "https://tabler.io/favicons/apple-touch-icon-180x180.png",
-            "tags": [
-                "essentials",
-                "self-hosted"
-            ]
+            "name": "Home Assistant",
+            "url": "https://www.home-assistant.io/",
+            "icon": "https://www.home-assistant.io/images/favicon-192x192.png",
+            "tags": ["home automation", "self-hosted"],
+            "description": "Self-hosted automation platform for controlling & managing smart devices."
+        },
+        {
+            "name": "Phoscon",
+            "url": "https://phoscon.de",
+            "icon": "https://phoscon.de/img/favicon/favicon-96x96.png",
+            "tags": ["home automation"],
+            "description": "Home automation gateway software for controlling & managing smart devices."
         }
     ],
-    "Network": [
+    "Virtualization": [
         {
-            "name": "NetBox",
-            "url": "https://github.com/netbox-community/netbox",
-            "icon": "https://raw.githubusercontent.com/wiki/netbox-community/netbox/images/deploy/deploy1.png",
-            "tags": [
-                "self-hosted",
-                "network"
-            ]
+            "name": "Portainer",
+            "url": "https://www.portainer.io/",
+            "icon": "https://www.portainer.io/favicon-32x32.png",
+            "tags": ["virtualization"],
+            "description": "User-friendly container management tool for deploying & managing Docker containers."
+        },
+        {
+            "name": "Rancher",
+            "url": "https://rancher.com/",
+            "icon": "https://rancher.com/img/icons/favicon-32x32.png",
+            "tags": ["virtualization"],
+            "description": "Container management platform for deploying & managing Kubernetes clusters."
+        },
+        {
+            "name": "PiKVM",
+            "url": "https://pikvm.org/",
+            "icon": "https://pikvm.org/img/apple-touch-icon.png",
+            "tags": ["virtualization"],
+            "description": "Open-source virtualization solution for remote server management on Raspberry Pi."
+        },
+        {
+            "name": "Proxmox",
+            "url": "https://www.proxmox.com/",
+            "icon": "https://www.proxmox.com/templates/yoo_nano2/favicon.ico",
+            "tags": ["virtualization"],
+            "description": "Open-source virtualization management platform for running VMs & containers."
+        },
+        {
+            "name": "Proxmox 3",
+            "url": "https://www.proxmox.com/",
+            "icon": "https://www.proxmox.com/templates/yoo_nano2/favicon.ico",
+            "tags": ["virtualization"],
+            "description": "Version of Proxmox platform for managing VMs & containers on a single host."
+        },
+        {
+            "name": "Proxmox 2",
+            "url": "https://www.proxmox.com/",
+            "icon": "https://www.proxmox.com/templates/yoo_nano2/favicon.ico",
+            "tags": ["virtualization"],
+            "description": "Previous iteration of Proxmox platform for VM & container management."
+        }
+    ],
+    "Additional Links": [
+        {
+            "name": "Overseerr",
+            "url": "https://overseerr.dev/",
+            "icon": "https://overseerr.dev/favicon.png",
+            "tags": ["media", "self-hosted"],
+            "description": "Self-hosted app for managing movie & TV show requests and automation."
+        },
+        {
+            "name": "Portainer Backup",
+            "url": "https://documentation.portainer.io/v2.0/endpoints/edge_sync/backup_restore/",
+            "icon": "https://documentation.portainer.io/docs/assets/favicon.ico",
+            "tags": ["essentials", "self-hosted"],
+            "description": "Portainer Backup provides a method to create and manage backups of your Portainer data and settings for easy restoration."
+        },
+        {
+            "name": "Uptime Kuma",
+            "url": "https://github.com/louislam/uptime-kuma",
+            "icon": "https://github.com/louislam/uptime-kuma/raw/main/static/icons/android-chrome-512x512.png",
+            "tags": ["essentials", "self-hosted"],
+            "description": "Self-hosted monitoring solution to track website & service uptime."
         }
     ]
 }
