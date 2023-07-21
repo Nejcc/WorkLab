@@ -27,4 +27,11 @@ final class WelcomeController extends Controller
 
         return view('welcome', compact('dashboard'));
     }
+
+    public function install()
+    {
+        $dashboard = json_decode(file_get_contents(database_path('apps.json')));
+
+        return view('installation', compact('dashboard'));
+    }
 }

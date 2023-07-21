@@ -64,6 +64,26 @@
 
             box-shadow: inset 0 calc(-1 * 1px) 0 0 #333;
         }
+
+        .status-tab {
+            --tblr-status-height: 1.5rem;
+            --tblr-status-color: #667382;
+            --tblr-status-color-rgb: 102,115,130;
+            display: inline-flex;
+            align-items: center;
+            height: var(--tblr-status-height);
+            padding: 0.25rem 0.75rem;
+            gap: 0.5rem;
+            color: var(--tblr-status-color);
+            background: rgba(var(--tblr-status-color-rgb),.1);
+            font-size: .675rem;
+            text-transform: none;
+            letter-spacing: normal;
+            border-radius: 100rem;
+            font-weight: var(--tblr-font-weight-medium);
+            line-height: 1;
+            margin: 0;
+        }
     </style>
 </head>
 <body>

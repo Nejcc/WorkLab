@@ -20,6 +20,7 @@ Auth::routes();
 //Route::get('/', fn () => view('welcome'))->name('welcome');
 
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
+Route::get('/software/install', [App\Http\Controllers\WelcomeController::class, 'install'])->name('software.install');
 
 Route::get('/locale/{locale}', \App\Http\Controllers\LocaleController::class)->name('set.locale');
 
