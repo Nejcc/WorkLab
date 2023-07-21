@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('{{ table }}', function (Blueprint $table) {
+        Schema::create('device_roles', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('app_token_id');
             $table->unsignedBigInteger('user_id');
             $table->string('name');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->text('description')->nullable();
-
+            $table->string('color')->nullable();
+            $table->string('vm_role')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('{{ table }}');
+        Schema::dropIfExists('device_roles');
     }
 };

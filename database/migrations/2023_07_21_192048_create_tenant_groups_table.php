@@ -11,14 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('{{ table }}', function (Blueprint $table) {
+        Schema::create('tenant_groups', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('app_token_id');
-            $table->unsignedBigInteger('user_id');
+//            $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->string('slug');
             $table->text('description')->nullable();
-
+            $table->unsignedBigInteger('parent_id')->nullable();
+//            $table->unsignedBigInteger('customer_id')->nullable();
+//            $table->string('tags')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('{{ table }}');
+        Schema::dropIfExists('tenant_groups');
     }
 };

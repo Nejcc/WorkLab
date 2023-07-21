@@ -22,6 +22,15 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
 Route::get('/software/install', [App\Http\Controllers\WelcomeController::class, 'install'])->name('software.install');
 
+Route::namespace('DataCenter')->prefix('data-center')->name('data-center.')->group(function () {
+    Route::namespace('Organization')->prefix('organization')->name('organization.')->group(function () {
+        Route::namespace('Tenancy')->prefix('tenancy')->name('tenancy.')->group(function () {
+            Route::get('/tenant', [\App\Http\Controllers\DataCenter\Organization\Tenancy\TenantsController::class, 'index'])->name('tenants.index');
+            Route::get('/tenant/{tenant}', [\App\Http\Controllers\DataCenter\Organization\Tenancy\TenantsController::class, 'show'])->name('tenants.show');
+        });
+    });
+});
+
 Route::get('/locale/{locale}', \App\Http\Controllers\LocaleController::class)->name('set.locale');
 
 Route::get('login/github', [\App\Http\Controllers\Auth\SocialiteLoginController::class, 'redirectToGithubProvider'])->name('sociolite.github.login');

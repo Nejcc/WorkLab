@@ -24,3 +24,8 @@ function getIconScraperFromUrl(string $url)
     return $img->parse($url);
 
 }
+
+function generateColor()
+{
+    return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
+}

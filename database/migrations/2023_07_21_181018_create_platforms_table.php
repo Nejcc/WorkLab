@@ -11,13 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('{{ table }}', function (Blueprint $table) {
+        Schema::create('platforms', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('app_token_id');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('manufacturer_id');
+//            $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->string('slug');
             $table->text('description')->nullable();
+            $table->string('napalm_driver');
+//            $table->string('napalm_args');
 
             $table->timestamps();
         });
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('{{ table }}');
+        Schema::dropIfExists('platforms');
     }
 };
