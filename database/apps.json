@@ -172,22 +172,7 @@
             "description": "Self-hosted password manager with built-in encryption for secure sharing."
         }
     ],
-    "Services": [
-        {
-            "name": "Bitwarden",
-            "url": "https://bitwarden.com",
-            "icon": "https://bitwarden.com/icons/icon-192x192.png?v=1abf57d1154002a9fac426a2c5c04d85",
-            "tags": ["self-hosted", "password manager"],
-            "description": "Secure self-hosted password manager for managing passwords & sensitive data."
-        },
-        {
-            "name": "Nextcloud",
-            "url": "https://nextcloud.com",
-            "icon": "https://nextcloud.com/wp-content/uploads/2022/03/favicon.png",
-            "tags": ["self-hosted", "cloud"],
-            "description": "Self-hosted cloud storage & collaboration platform for files & data."
-        }
-    ],
+
     "Home Automation": [
         {
             "name": "Home Assistant",
@@ -244,6 +229,15 @@
             "icon": "https://wazuh.com/wp-content/themes/wazuh-v3/assets/images/favicon.svg?v=1689581158",
             "tags": ["security", "self-hosted"],
             "description": "Unified XDR and SIEM protection for endpoints\nand cloud workloads."
+        }
+    ],
+    "Services": [
+        {
+            "name": "Nextcloud",
+            "url": "https://nextcloud.com",
+            "icon": "https://nextcloud.com/wp-content/uploads/2022/03/favicon.png",
+            "tags": ["self-hosted", "cloud"],
+            "description": "Self-hosted cloud storage & collaboration platform for files & data."
         }
     ]
 }
