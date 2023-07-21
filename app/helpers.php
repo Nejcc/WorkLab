@@ -17,3 +17,10 @@ if (!function_exists('getLocaleByName')) {
         return \App\Helpers\Utilities\GetLocales::get($name);
     }
 }
+
+function getIconScraperFromUrl(string $url)
+{
+    $img =  new \App\Services\IconScraperService();
+    return $img->parse($url);
+
+}
