@@ -26,3 +26,58 @@
 .border-radius-none {
   border-radius: 0 !important;
 }
+
+[data-bs-theme=dark] .btn-primary:hover{
+    background: #313333;
+}
+
+[data-bs-theme=dark] .btn-primary,
+[data-bs-theme=dark] .btn-action:active,
+[data-bs-theme=dark] .btn-action:focus,
+[data-bs-theme=dark] .btn-action:hover{
+    background: #222323;
+}
+
+[data-bs-theme=dark] .navbar .avatar,
+[data-bs-theme=dark] .form-control {
+    background: #1a1b1b;
+}
+
+[data-bs-theme=dark] .page {
+    background-color: #1a1a1a;
+}
+
+[data-bs-theme=dark] .dropdown-header{
+    color: whitesmoke;
+}
+
+[data-bs-theme=dark] .dropdown-menu,
+[data-bs-theme=dark] .card {
+    background: #393939;
+}
+
+[data-bs-theme=dark] .navbar {
+    background: #131313;
+
+    box-shadow: inset 0 calc(-1 * 1px) 0 0 #333;
+}
+
+.status-tab {
+    --tblr-status-height: 1.5rem;
+    --tblr-status-color: #667382;
+    --tblr-status-color-rgb: 102,115,130;
+    display: inline-flex;
+    align-items: center;
+    height: var(--tblr-status-height);
+    padding: 0.25rem 0.75rem;
+    gap: 0.5rem;
+    color: var(--tblr-status-color);
+    background: rgba(var(--tblr-status-color-rgb),.1);
+    font-size: .675rem;
+    text-transform: none;
+    letter-spacing: normal;
+    border-radius: 100rem;
+    font-weight: var(--tblr-font-weight-medium);
+    line-height: 1;
+    margin: 0;
+}
