@@ -5,7 +5,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>{{ config('app.name') }} - @yield('title')</title>
+    <title>{{ 'Labstasy' ?? config('app.name') }} - @yield('title')</title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- CSS files -->
@@ -99,7 +99,7 @@
             <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
                 <a href="{{ route('home') }}">
                     {{--                    <img src="" width="110" height="32" alt="logo" class="navbar-brand-image">--}}
-                    {{ 'WorkLab' ?? config('app.name') }}
+                    {{ 'Labstasy' ?? config('app.name') }}
                 </a>
             </h1>
             <div class="navbar-nav flex-row order-md-last">

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'title')
+@section('title', 'Dashboard')
 
 @section('header')
     <div class="page-header d-print-none mb-5">
@@ -70,7 +70,7 @@
                 @if (count($data) == 0)
                     @continue
                 @endif
-                <div data-title="{{ \Illuminate\Support\Str::slug($key) ?? '--key--' }}" class="col-3 mb-3">
+                <div data-title="{{ \Illuminate\Support\Str::slug($key) ?? '--key--' }}" class="col-lg-3 col-md-4 col-sm-12 mb-3">
                     <div class="row">
                         <div class="col-12">
                             <div class="card-header mb-2">
@@ -95,8 +95,6 @@
                             </div>
                         </div>
                         @foreach($data as $tab)
-
-                            {{--                            @dd($tab->name);--}}
                             <div class="col-12 mb-2">
                                 <a class="card card-link" target="_blank" href="{{ $tab->url ?? '--url--' }}">
                                     <div class="card-body p-2">
