@@ -24,6 +24,7 @@ Route::get('/software/install', [App\Http\Controllers\WelcomeController::class, 
 
 Route::namespace('DataCenter')->prefix('data-center')->name('data-center.')->group(function () {
     Route::namespace('Organization')->prefix('organization')->name('organization.')->group(function () {
+        Route::get('/', [\App\Http\Controllers\DataCenter\Organization\OrganizationController::class, 'index'])->name('index');
         Route::namespace('Tenancy')->prefix('tenancy')->name('tenancy.')->group(function () {
             Route::get('/tenant', [\App\Http\Controllers\DataCenter\Organization\Tenancy\TenantsController::class, 'index'])->name('tenants.index');
             Route::get('/tenant/{tenant}', [\App\Http\Controllers\DataCenter\Organization\Tenancy\TenantsController::class, 'show'])->name('tenants.show');
