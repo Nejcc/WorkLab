@@ -28,8 +28,8 @@
                     <div class="card-header">
                         Devices
                     </div>
-                    <div class="card-body p-0">
-                        <table class="table table-striped">
+                    <div class="card-body p-0" style="overflow: hidden">
+                        <table class="table table-responsive">
                             <thead>
                             <tr>
                                 <th>Name</th>
@@ -269,7 +269,7 @@
 
                         <!-- First Connector -->
                         <div class="col-auto d-flex align-items-center">
-                            <div class="connector"></div>
+                            <div class="connector connector-color-gray"></div>
                         </div>
 
                         <!-- Cable Data -->
@@ -281,7 +281,7 @@
 
                         <!-- Second Connector -->
                         <div class="col-auto d-flex align-items-center">
-                            <div class="connector"></div>
+                            <div class="connector connector-color-gray"></div>
                         </div>
 
                         <!-- Switch -->
@@ -310,6 +310,7 @@
 
 @push('css')
     <style>
+        /* Common styles for all devices */
         .device {
             width: 200px;
             height: 200px;
@@ -323,11 +324,20 @@
             font-size: 18px;
         }
 
-        .connector {
+        .connector-container {
+            position: relative;
+        }
 
-            min-width: 250px;
-            height: 6px;
+        .connector {
+            width: 250px;
+            height: 10px;
             background-color: #007bff;
+            /* Adjusted the margins to overlay the connector between devices */
+            margin: -1px 0;
+        }
+
+        .connector-color-gray {
+            background-color: #919191;
         }
 
         .cable-data {
@@ -337,6 +347,43 @@
             /*margin-top: 60px;*/
             justify-content: center;
             align-items: center;
+            /*border: 10px solid #919191;*/
+            /*border-radius: 20px;*/
+            /*margin-y: 50px;*/
+        }
+
+        /* Media queries for tablets */
+        @media screen and (max-width: 768px) {
+            .device {
+                width: 100px;
+                height: 100px;
+                font-size: 16px;
+            }
+
+            .connector {
+                width: 100px;
+            }
+
+            .cable-data {
+                font-size: 12px;
+            }
+        }
+
+        /* Media queries for mobile devices */
+        @media screen and (max-width: 480px) {
+            .device {
+                width: 50px;
+                height: 50px;
+                font-size: 8px;
+            }
+
+            .connector {
+                width: 50px;
+            }
+
+            .cable-data {
+                font-size: 8px;
+            }
         }
 
         /*//ports*/
@@ -591,4 +638,5 @@
         }
 
     </style>
+
 @endpush
