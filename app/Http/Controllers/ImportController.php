@@ -34,7 +34,7 @@ final class ImportController extends Controller
     public function parse_import(Request $request)
     {
         $parse = Yaml::parse($request->input('yaml_data'));
-
+//        dd($parse);
         //manufacturer
         Manufacturer::updateOrCreate([
             'app_token_id' => 1,
@@ -49,10 +49,13 @@ final class ImportController extends Controller
             'slug'         => $parse['slug'],
         ], [
             'name'        => $parse['model'],
-            'airflow'     => $parse['airflow'],
+            'airflow'     => (!empty($parse['airflow'])) ? $parse['airflow'] : null,
             'description' => $parse['comments'],
+            'part_number' => (!empty($parse['part_number'])) ? $parse['part_number'] : null,
+            'u_height' => (!empty($parse['u_height'])) ? $parse['u_height'] : 0,
+            'is_full_depth' => (!empty($parse['is_full_depth'])) ? $parse['is_full_depth'] : false,
         ]);
-
-        dd($parse);
+        return redirect()->back();
+//        dd($parse);
     }
 }

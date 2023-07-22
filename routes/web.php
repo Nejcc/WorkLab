@@ -25,6 +25,18 @@ Route::post('/import', [App\Http\Controllers\ImportController::class, 'parse_imp
 Route::get('/software/install', [App\Http\Controllers\WelcomeController::class, 'install'])->name('software.install');
 
 Route::namespace('DataCenter')->prefix('data-center')->name('data-center.')->group(function () {
+    #DCIM
+    Route::namespace('Dcim')->prefix('dcim')->name('dcim.')->group(function () {
+
+        Route::get('manufacturer',[\App\Http\Controllers\DataCenter\Dcim\ManufacturerController::class, 'index'])->name('manufacturer.index');
+
+        Route::namespace('Interfaces')->prefix('interfaces')->name('interfaces.')->group(function () {
+            Route::get('/device', [\App\Http\Controllers\DataCenter\Dcim\Interfaces\DeviceController::class, 'index'])->name('device.index');
+            Route::get('/device/{device}', [\App\Http\Controllers\DataCenter\Dcim\Interfaces\DeviceController::class, 'show'])->name('device.show');
+        });
+    });
+
+    #Organizations
     Route::namespace('Organization')->prefix('organization')->name('organization.')->group(function () {
         Route::get('/', [\App\Http\Controllers\DataCenter\Organization\OrganizationController::class, 'index'])->name('index');
         Route::namespace('Tenancy')->prefix('tenancy')->name('tenancy.')->group(function () {
@@ -33,6 +45,8 @@ Route::namespace('DataCenter')->prefix('data-center')->name('data-center.')->gro
         });
     });
 });
+
+
 
 Route::get('/locale/{locale}', \App\Http\Controllers\LocaleController::class)->name('set.locale');
 

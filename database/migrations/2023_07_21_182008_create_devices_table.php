@@ -17,6 +17,7 @@ return new class extends Migration
 //            $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->string('slug');
+            $table->string('part_number')->nullable();
             $table->text('description')->nullable();
             $table->unsignedBigInteger('device_type_id')->nullable();
             $table->unsignedBigInteger('device_role_id')->nullable();
@@ -27,6 +28,8 @@ return new class extends Migration
             $table->unsignedBigInteger('rack_id')->nullable();
             $table->float('position')->nullable();
             $table->string('face')->nullable();
+            $table->smallInteger('u_height')->default(0);
+            $table->boolean('is_full_depth')->default(false);
             $table->string('status')->nullable();
             $table->string('airflow')->nullable();
 //            $table->text('description')->nullable();

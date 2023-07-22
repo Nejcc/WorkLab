@@ -67,44 +67,54 @@
     <div class="container-xl">
         <div class="row mb-5">
             <div class="col-lg-2">
-                <div class="card p-0 m-0">
-                    <div class="empty p-5">
-                        <p class="empty-title">{{ \App\Models\DataCenter\DCIM\Device::count() }}</p>
-                        <p class="empty-subtitle text-muted">Devices</p>
+                <a href="{{ route('data-center.dcim.interfaces.device.index') }}">
+                    <div class="card p-0 m-0">
+                        <div class="empty p-5">
+                            <p class="empty-title">{{ \App\Models\DataCenter\DCIM\Device::count() }}</p>
+                            <p class="empty-subtitle text-muted">Devices</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-lg-2">
-                <div class="card p-0 m-0">
-                    <div class="empty p-5">
-                        <p class="empty-title">{{ \App\Models\DataCenter\DCIM\Manufacturer::count() }}</p>
-                        <p class="empty-subtitle text-muted">Manufacturer</p>
+                <a href="{{ route('data-center.dcim.manufacturer.index') }}">
+                    <div class="card p-0 m-0">
+                        <div class="empty p-5">
+                            <p class="empty-title">{{ \App\Models\DataCenter\DCIM\Manufacturer::count() }}</p>
+                            <p class="empty-subtitle text-muted">Manufacturer</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-lg-2">
-                <div class="card p-0 m-0">
-                    <div class="empty p-5">
-                        <p class="empty-title">{{ \App\Models\DataCenter\Organization\Tenancy\Tenant::count() }}</p>
-                        <p class="empty-subtitle text-muted">Tenant</p>
+                <a href="{{ route('data-center.dcim.interfaces.device.index') }}">
+                    <div class="card p-0 m-0">
+                        <div class="empty p-5">
+                            <p class="empty-title">{{ \App\Models\DataCenter\Organization\Tenancy\Tenant::count() }}</p>
+                            <p class="empty-subtitle text-muted">Tenant</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-lg-2">
-                <div class="card p-0 m-0">
-                    <div class="empty p-5">
-                        <p class="empty-title">{{ \App\Models\DataCenter\Organization\Tenancy\TenantGroup::count() }}</p>
-                        <p class="empty-subtitle text-muted">Tenant Group</p>
+                <a href="{{ route('data-center.organization.tenancy.tenants.index') }}">
+                    <div class="card p-0 m-0">
+                        <div class="empty p-5">
+                            <p class="empty-title">{{ \App\Models\DataCenter\Organization\Tenancy\TenantGroup::count() }}</p>
+                            <p class="empty-subtitle text-muted">Tenant Group</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-lg-2">
-                <div class="card p-0 m-0">
-                    <div class="empty p-5">
-                        <p class="empty-title">{{ \App\Models\DataCenter\Organization\Tenancy\TenantGroup::count() }}</p>
-                        <p class="empty-subtitle text-muted">Tenant Group</p>
+                <a href="{{ route('data-center.organization.tenancy.tenants.index') }}">
+                    <div class="card p-0 m-0">
+                        <div class="empty p-5">
+                            <p class="empty-title">{{ \App\Models\DataCenter\Organization\Tenancy\TenantGroup::count() }}</p>
+                            <p class="empty-subtitle text-muted">Tenant Group</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-lg-2">
                 <div class="card p-0 m-0">
@@ -120,7 +130,8 @@
                 @if (count($data) == 0)
                     @continue
                 @endif
-                <div data-title="{{ \Illuminate\Support\Str::slug($key) ?? '--key--' }}" class="col-lg-3 col-md-4 col-sm-12 mb-3">
+                <div data-title="{{ \Illuminate\Support\Str::slug($key) ?? '--key--' }}"
+                     class="col-lg-3 col-md-4 col-sm-12 mb-3">
                     <div class="row">
                         <div class="col-12">
                             <div class="card-header mb-2">
@@ -151,13 +162,14 @@
                                         <div class="row g-2 align-items-center">
                                             <div class="col-auto">
                                                 <span class=" rounded">
-                                                    <img src="{{ $tab->icon ?? '---' }}" width="50" height="50" alt="noimg">
+                                                    <img src="{{ $tab->icon ?? '---' }}" width="50" height="50"
+                                                         alt="noimg">
                                                 </span>
                                             </div>
                                             <div class="col">
                                                 <div class="font-weight-medium">{{ $tab->name ?? '--name--' }}</div>
                                                 <div
-                                                    class="text-muted">{{ \Illuminate\Support\Str::limit( $tab->description, 50) ?? '' }}</div>
+                                                        class="text-muted">{{ \Illuminate\Support\Str::limit( $tab->description, 50) ?? '' }}</div>
                                             </div>
                                         </div>
                                     </div>

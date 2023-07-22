@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\DataCenter\DCIM;
+namespace App\Http\Controllers\DataCenter\Dcim;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreManufacturerRequest;
@@ -14,9 +14,10 @@ class ManufacturerController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): Response
+    public function index()
     {
-        //
+        $manufacturer = Manufacturer::all();
+        return view('data-center.dcim.manufacturer.index', compact('manufacturer'));
     }
 
     /**
