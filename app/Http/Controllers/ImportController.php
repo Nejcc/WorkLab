@@ -80,7 +80,7 @@ final class ImportController extends Controller
                         'type'        => $device_interface['type'],
                         'label'       => (!empty($device_interface['label'])) ? $device_interface['label'] : null,
                         'port_number' => (!empty($port)) ? $port[1] : $port_num,
-                        'port_type'   => (!empty($d)) ? $d[1] : ((str_contains($device_interface['name'],'SFP')) ? 'SFP' : 'LAN'),
+                        'port_type'   => (!empty($d)) ? str_replace(' ', '', trim($d[1])) : trim((str_contains($device_interface['name'],'SFP')) ? 'SFP' : 'LAN'),
                         'port_speed'  => null,
                     ]);
                     $port_num++;

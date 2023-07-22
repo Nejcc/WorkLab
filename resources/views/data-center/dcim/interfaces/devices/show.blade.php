@@ -125,8 +125,10 @@
                 <h2>Front Panel</h2>
                 <div class="switch-panel">
                     <div class="port-container justify-content-center">
+{{--                        @dd($ports)--}}
                         @foreach($ports as $key => $port_type_interface)
-                            @if($key == 'LAN')
+
+                            @if(in_array($key, ['LAN', 'WAN']))
                                 @foreach($port_type_interface as $di)
                                     <a href="{{ (!empty($di->linked_device_id)) ? route('data-center.dcim.interfaces.device.show', $di->linked_device_id) : '#' }}">
                                         <div class="port {{ (!empty($di->linked_device_id)) ? 'connected' : 'bg-white' }}">
