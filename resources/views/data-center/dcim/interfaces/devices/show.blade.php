@@ -130,7 +130,8 @@
 
                             @if(in_array($key, ['LAN', 'WAN']))
                                 @foreach($port_type_interface as $di)
-                                    <a href="{{ (!empty($di->linked_device_id)) ? route('data-center.dcim.interfaces.device.show', $di->linked_device_id) : '#' }}">
+{{--                                    <a href="{{ (!empty($di->linked_device_id)) ? route('data-center.dcim.interfaces.device.show', $di->linked_device_id) : '#' }}">--}}
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-report">
                                         <div class="port {{ (!empty($di->linked_device_id)) ? 'connected' : 'bg-white' }}">
                                             {{ (!empty($di->port_type)) ? $di->port_type :  '' }} {{ (!empty($di->port_number) ? $di->port_number : '') }}
                                             <div class="led {{ (!empty($di->linked_device_id)) ? 'green-led' : 'gray-led' }}"></div>
@@ -145,7 +146,8 @@
                                 @endforeach
                             @elseif(in_array($key, ['SFP', 'SFP+']))
                                 @foreach($port_type_interface as $di)
-                                    <a href="{{ (!empty($di->linked_device_id)) ? route('data-center.dcim.interfaces.device.show', $di->linked_device_id) : '#' }}">
+{{--                                    <a href="{{ (!empty($di->linked_device_id)) ? route('data-center.dcim.interfaces.device.show', $di->linked_device_id) : '#' }}">--}}
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-report">
                                         <div class="sfp-ports">
                                             <div class="sfp-port {{ (!empty($di->linked_device_id)) ? 'connected' : 'bg-white' }}">
                                                 {{ (!empty($di->port_type)) ? $di->port_type :  '' }} {{ (!empty($di->port_number) ? $di->port_number : '') }}
@@ -234,9 +236,110 @@
     </div>
 @endsection
 
+@section('modals')
+    <div class="modal modal-blur fade" id="modal-report" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Connection</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row justify-content-between">
+                        <!-- Router -->
+                        <div class="col-auto">
+                            <h3>Router</h3>
+                        </div>
+
+
+                        <!-- Switch -->
+                        <div class="col-auto">
+                            <h3>Switch</h3>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <!-- Router -->
+                        <div class="col-auto">
+                            <div class="device col-auto d-flex flex-column align-items-center">
+                                <div class="mb-3">Port 1</div>
+                                <div>192.168.1.1/24</div>
+                            </div>
+                        </div>
+
+                        <!-- First Connector -->
+                        <div class="col-auto d-flex align-items-center">
+                            <div class="connector"></div>
+                        </div>
+
+                        <!-- Cable Data -->
+                        <div class="col-auto d-flex flex-column align-items-center cable-data">
+                            <div>Cable Cat6A</div>
+                            <div>Planned</div>
+                            <div>1.00 meters</div>
+                        </div>
+
+                        <!-- Second Connector -->
+                        <div class="col-auto d-flex align-items-center">
+                            <div class="connector"></div>
+                        </div>
+
+                        <!-- Switch -->
+                        <div class="col-auto">
+                            <div class="device col-auto d-flex flex-column ">
+                                <div class="mb-3">Port 3</div>
+                                <div>192.168.1.5/24</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+{{--                <div class="modal-footer">--}}
+{{--                    <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">--}}
+{{--                        Cancel--}}
+{{--                    </a>--}}
+{{--                    <a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">--}}
+{{--                        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->--}}
+{{--                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>--}}
+{{--                        Create new report--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+            </div>
+        </div>
+    </div>
+@endsection
+
 @push('css')
     <style>
+        .device {
+            width: 200px;
+            height: 200px;
+            /*background-color: #f8f9fa;*/
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
 
+        .connector {
+
+            min-width: 250px;
+            height: 6px;
+            background-color: #007bff;
+        }
+
+        .cable-data {
+            display: flex;
+            font-size: 14px;
+            /*color: #0a0a0a;*/
+            /*margin-top: 60px;*/
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*//ports*/
 
         .switch-panel {
             border: 5px solid #646464;
