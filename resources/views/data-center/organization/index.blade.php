@@ -19,6 +19,7 @@
         </div>
     </div>
 @endsection
+
 @section('content')
     <div class="container-xl">
         <div class="row">

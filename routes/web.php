@@ -17,9 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-//Route::get('/', fn () => view('welcome'))->name('welcome');
-
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
+Route::get('/import', [App\Http\Controllers\ImportController::class, 'import'])->name('import');
+Route::post('/import', [App\Http\Controllers\ImportController::class, 'parse_import'])->name('import.parse_import');
+
+
 Route::get('/software/install', [App\Http\Controllers\WelcomeController::class, 'install'])->name('software.install');
 
 Route::namespace('DataCenter')->prefix('data-center')->name('data-center.')->group(function () {
