@@ -27,7 +27,11 @@ class DeviceController extends Controller
 
     public function show(Device $device)
     {
-//        $tenant->load('tenant_group');
-        return view('data-center.dcim.interfaces.devices.show', compact('device'));
+        $device->load('device_interfaces');
+
+        $ports = collect($device->device_interfaces)->groupBy('port_type', true);
+//        dd($ports->toArray());
+
+        return view('data-center.dcim.interfaces.devices.show', compact(['device','ports']));
     }
 }

@@ -128,31 +128,35 @@
                         @foreach($ports as $key => $port_type_interface)
                             @if($key == 'LAN')
                                 @foreach($port_type_interface as $di)
-                                    <div class="port {{ (!empty($di->linked_device_id)) ? 'connected' : 'bg-white' }}">
-                                        {{ (!empty($di->port_type)) ? $di->port_type :  '' }} {{ (!empty($di->port_number) ? $di->port_number : '') }}
-                                        <div class="led {{ (!empty($di->linked_device_id)) ? 'green-led' : 'gray-led' }}"></div>
-                                        <div class="port-details">
-                                            <div>Port Name: Port {{ $di->name }}</div>
-                                            <div>Port Number: {{ $di->port_number }}</div>
-                                            <div>Port Number To: {{ $di->linked_device_id ?? '---' }}</div>
-                                            <div>Port speed: {{ $di->port_speed ?? '---' }}</div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            @elseif(in_array($key, ['SFP', 'SFP+']))
-                                @foreach($port_type_interface as $di)
-                                    <div class="sfp-ports">
-                                        <div class="sfp-port {{ (!empty($di->linked_device_id)) ? 'connected' : 'bg-white' }}">
+                                    <a href="{{ (!empty($di->linked_device_id)) ? route('data-center.dcim.interfaces.device.show', $di->linked_device_id) : '#' }}">
+                                        <div class="port {{ (!empty($di->linked_device_id)) ? 'connected' : 'bg-white' }}">
                                             {{ (!empty($di->port_type)) ? $di->port_type :  '' }} {{ (!empty($di->port_number) ? $di->port_number : '') }}
-                                            <div class="sfp-led {{ (!empty($di->linked_device_id)) ? 'green-led' : 'gray-led' }}"></div>
-                                            <div class="sfp-details">
+                                            <div class="led {{ (!empty($di->linked_device_id)) ? 'green-led' : 'gray-led' }}"></div>
+                                            <div class="port-details">
                                                 <div>Port Name: Port {{ $di->name }}</div>
                                                 <div>Port Number: {{ $di->port_number }}</div>
                                                 <div>Port Number To: {{ $di->linked_device_id ?? '---' }}</div>
                                                 <div>Port speed: {{ $di->port_speed ?? '---' }}</div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </a>
+                                @endforeach
+                            @elseif(in_array($key, ['SFP', 'SFP+']))
+                                @foreach($port_type_interface as $di)
+                                    <a href="{{ (!empty($di->linked_device_id)) ? route('data-center.dcim.interfaces.device.show', $di->linked_device_id) : '#' }}">
+                                        <div class="sfp-ports">
+                                            <div class="sfp-port {{ (!empty($di->linked_device_id)) ? 'connected' : 'bg-white' }}">
+                                                {{ (!empty($di->port_type)) ? $di->port_type :  '' }} {{ (!empty($di->port_number) ? $di->port_number : '') }}
+                                                <div class="sfp-led {{ (!empty($di->linked_device_id)) ? 'green-led' : 'gray-led' }}"></div>
+                                                <div class="sfp-details">
+                                                    <div>Port Name: Port {{ $di->name }}</div>
+                                                    <div>Port Number: {{ $di->port_number }}</div>
+                                                    <div>Port Number To: {{ $di->linked_device_id ?? '---' }}</div>
+                                                    <div>Port speed: {{ $di->port_speed ?? '---' }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
                                 @endforeach
                             @endif
                         @endforeach
