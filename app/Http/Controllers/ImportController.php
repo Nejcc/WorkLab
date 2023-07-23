@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Models\DataCenter\DCIM\Device;
+use App\Models\DataCenter\Dcim\Device;
 use App\Models\DataCenter\Dcim\Interfaces\DeviceInterface;
-use App\Models\DataCenter\DCIM\Manufacturer;
+use App\Models\DataCenter\Dcim\Manufacturer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
