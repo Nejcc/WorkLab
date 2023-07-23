@@ -3,13 +3,8 @@
 namespace App\Http\Controllers\DataCenter\Dcim\Interfaces;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreManufacturerRequest;
-use App\Http\Requests\UpdateManufacturerRequest;
 use App\Models\DataCenter\Dcim\Device;
-use App\Models\DataCenter\Dcim\Manufacturer;
-use App\Models\DataCenter\Organization\Tenancy\Tenant;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Response;
+
 
 class DeviceController extends Controller
 {
