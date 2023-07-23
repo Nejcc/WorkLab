@@ -1,11 +1,11 @@
 <?php
 
-namespace Database\Factories\DataCenter\DCIM;
+namespace Database\Factories\DataCenter\Dcim;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\DataCenter\DCIM\Platform>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\DataCenter\Dcim\Platform>
  */
 class PlatformFactory extends Factory
 {

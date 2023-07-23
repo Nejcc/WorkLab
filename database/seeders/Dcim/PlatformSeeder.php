@@ -2,7 +2,7 @@
 
 namespace Database\Seeders\Dcim;
 
-use App\Models\DataCenter\DCIM\Platform;
+use App\Models\DataCenter\Dcim\Platform;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 

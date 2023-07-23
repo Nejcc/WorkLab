@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DataCenter\DCIM\Device;
+use App\Models\DataCenter\Dcim\Device;
 use App\Http\Requests\StoreDeviceRequest;
 use App\Http\Requests\UpdateDeviceRequest;
 use Illuminate\Http\RedirectResponse;

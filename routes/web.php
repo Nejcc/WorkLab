@@ -25,7 +25,7 @@ Route::post('/import', [App\Http\Controllers\ImportController::class, 'parse_imp
 Route::get('/software/install', [App\Http\Controllers\WelcomeController::class, 'install'])->name('software.install');
 
 Route::namespace('DataCenter')->prefix('data-center')->name('data-center.')->group(function () {
-    #DCIM
+    #Dcim
     Route::namespace('Dcim')->prefix('dcim')->name('dcim.')->group(function () {
 
         Route::get('manufacturer',[\App\Http\Controllers\DataCenter\Dcim\ManufacturerController::class, 'index'])->name('manufacturer.index');

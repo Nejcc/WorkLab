@@ -2,7 +2,7 @@
 
 namespace Database\Seeders\Dcim;
 
-use App\Models\DataCenter\DCIM\DeviceRole;
+use App\Models\DataCenter\Dcim\DeviceRole;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 

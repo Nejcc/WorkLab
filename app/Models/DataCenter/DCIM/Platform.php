@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\DataCenter\DCIM;
+namespace App\Models\DataCenter\Dcim;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

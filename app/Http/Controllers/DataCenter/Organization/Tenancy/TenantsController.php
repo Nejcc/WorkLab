@@ -5,7 +5,7 @@ namespace App\Http\Controllers\DataCenter\Organization\Tenancy;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreManufacturerRequest;
 use App\Http\Requests\UpdateManufacturerRequest;
-use App\Models\DataCenter\DCIM\Manufacturer;
+use App\Models\DataCenter\Dcim\Manufacturer;
 use App\Models\DataCenter\Organization\Tenancy\Tenant;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;

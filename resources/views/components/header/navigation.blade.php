@@ -42,7 +42,7 @@
                                         IPAM
                                     </a>
                                     <a class="dropdown-item" href="./empty.html">
-                                        DCIM
+                                        Dcim
                                     </a>
                                     <a class="dropdown-item" href="./empty.html">
                                         Virtualizations

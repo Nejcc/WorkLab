@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\DataCenter\DCIM;
+namespace App\Models\DataCenter\Dcim;
 
 use App\Models\DataCenter\Dcim\Interfaces\DeviceInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

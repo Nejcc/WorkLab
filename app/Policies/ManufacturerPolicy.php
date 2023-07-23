@@ -2,7 +2,7 @@
 
 namespace App\Policies;
 
-use App\Models\DataCenter\DCIM\Manufacturer;
+use App\Models\DataCenter\Dcim\Manufacturer;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 

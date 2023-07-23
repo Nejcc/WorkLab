@@ -2,7 +2,7 @@
 
 namespace App\Policies;
 
-use App\Models\DataCenter\DCIM\DeviceRole;
+use App\Models\DataCenter\Dcim\DeviceRole;
 use App\Models\User;
 use Illuminate\Auth\Access\Response;
 

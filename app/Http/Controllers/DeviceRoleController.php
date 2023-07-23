@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DataCenter\DCIM\DeviceRole;
+use App\Models\DataCenter\Dcim\DeviceRole;
 use App\Http\Requests\StoreDeviceRoleRequest;
 use App\Http\Requests\UpdateDeviceRoleRequest;
 use Illuminate\Http\RedirectResponse;

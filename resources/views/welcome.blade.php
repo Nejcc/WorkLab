@@ -70,7 +70,7 @@
                 <a href="{{ route('data-center.dcim.interfaces.device.index') }}">
                     <div class="card p-0 m-0">
                         <div class="empty p-5">
-                            <p class="empty-title">{{ \App\Models\DataCenter\DCIM\Device::count() }}</p>
+                            <p class="empty-title">{{ \App\Models\DataCenter\Dcim\Device::count() }}</p>
                             <p class="empty-subtitle text-muted">Devices</p>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                 <a href="{{ route('data-center.dcim.manufacturer.index') }}">
                     <div class="card p-0 m-0">
                         <div class="empty p-5">
-                            <p class="empty-title">{{ \App\Models\DataCenter\DCIM\Manufacturer::count() }}</p>
+                            <p class="empty-title">{{ \App\Models\DataCenter\Dcim\Manufacturer::count() }}</p>
                             <p class="empty-subtitle text-muted">Manufacturer</p>
                         </div>
                     </div>

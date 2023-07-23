@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DataCenter\DCIM\Platform;
+use App\Models\DataCenter\Dcim\Platform;
 use App\Http\Requests\StorePlatformRequest;
 use App\Http\Requests\UpdatePlatformRequest;
 use Illuminate\Http\RedirectResponse;

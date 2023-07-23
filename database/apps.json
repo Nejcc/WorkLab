@@ -27,7 +27,7 @@
             "url": "https://github.com/netbox-community/netbox",
             "icon": "https://raw.githubusercontent.com/wiki/netbox-community/netbox/images/deploy/deploy1.png",
             "tags": ["network"],
-            "description": "Open-source IP address management (IPAM) & data center infrastructure management (DCIM) solution."
+            "description": "Open-source IP address management (IPAM) & data center infrastructure management (Dcim) solution."
         },
         {
             "name": "Pi-hole",
