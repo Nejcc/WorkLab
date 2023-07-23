@@ -132,7 +132,7 @@
                                 @foreach($port_type_interface as $di)
 {{--                                    <a href="{{ (!empty($di->linked_device_id)) ? route('data-center.dcim.interfaces.device.show', $di->linked_device_id) : '#' }}">--}}
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#modal-report">
-                                        <div class="port {{ (!empty($di->linked_device_id)) ? 'connected' : 'bg-white' }}">
+                                        <div class="port {{ (!empty($di->linked_device_id)) ? 'connected' : 'bg-white' }} {{ ($key == 'WAN') ? 'orange-led' : '' }}">
                                             {{ (!empty($di->port_type)) ? $di->port_type :  '' }} {{ (!empty($di->port_number) ? $di->port_number : '') }}
                                             <div class="led {{ (!empty($di->linked_device_id)) ? 'green-led' : 'gray-led' }}"></div>
                                             <div class="port-details">

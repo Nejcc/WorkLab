@@ -1,6 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\DataCenter\Dcim\Interfaces;
+
+
+namespace  App\Http\Controllers\DataCenter\Dcim\Interfaces;
+
 
 use App\Http\Controllers\Controller;
 use App\Models\DataCenter\Dcim\Device;

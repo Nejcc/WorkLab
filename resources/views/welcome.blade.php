@@ -70,26 +70,6 @@
                 <a href="{{ route('data-center.dcim.interfaces.device.index') }}">
                     <div class="card p-0 m-0">
                         <div class="empty p-5">
-                            <p class="empty-title">{{ \App\Models\DataCenter\Dcim\Device::count() }}</p>
-                            <p class="empty-subtitle text-muted">Devices</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2">
-                <a href="{{ route('data-center.dcim.manufacturer.index') }}">
-                    <div class="card p-0 m-0">
-                        <div class="empty p-5">
-                            <p class="empty-title">{{ \App\Models\DataCenter\Dcim\Manufacturer::count() }}</p>
-                            <p class="empty-subtitle text-muted">Manufacturer</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2">
-                <a href="{{ route('data-center.dcim.interfaces.device.index') }}">
-                    <div class="card p-0 m-0">
-                        <div class="empty p-5">
                             <p class="empty-title">{{ \App\Models\DataCenter\Organization\Tenancy\Tenant::count() }}</p>
                             <p class="empty-subtitle text-muted">Tenant</p>
                         </div>
@@ -106,6 +86,28 @@
                     </div>
                 </a>
             </div>
+            <div class="col-lg-2">
+                <a href="{{ route('data-center.dcim.interfaces.device.index') }}">
+                    <div class="card p-0 m-0">
+                        <div class="empty p-5">
+                            <p class="empty-title">{{ \App\Models\DataCenter\Dcim\Device::count() }}</p>
+                            <p class="empty-subtitle text-muted">Devices</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2">
+                <a href="{{ route('data-center.dcim.manufacturer.index') }}">
+                    <div class="card p-0 m-0">
+                        <div class="empty p-5">
+                            <p class="empty-title">{{ \App\Models\DataCenter\Dcim\Manufacturer::count() }}</p>
+                            <p class="empty-subtitle text-muted">Manufacturer</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
             <div class="col-lg-2">
                 <a href="{{ route('data-center.organization.tenancy.tenants.index') }}">
                     <div class="card p-0 m-0">
@@ -141,17 +143,15 @@
                                     </h2>
                                 </div>
                                 <div class="card-actions">
-                                    <a href="#" class="btn-action dropdown-toggle" data-bs-toggle="dropdown"
-                                       aria-haspopup="true" aria-expanded="false">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                             stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-                                            <path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-                                            <path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-                                        </svg>
-                                    </a>
+                                    <div class="dropdown">
+                                        <a href="#" class="btn-action dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><!-- Download SVG icon from http://tabler-icons.io/i/dots-vertical -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path></svg>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end" data-popper-placement="bottom-end">
+                                            <a class="dropdown-item" href="#">Add new pin</a>
+                                            <a class="dropdown-item" href="#">Edit group</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
