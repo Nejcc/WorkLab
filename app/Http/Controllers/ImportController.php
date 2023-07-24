@@ -69,6 +69,7 @@ final class ImportController extends Controller
 
 //            $updatedJsonData = json_encode($updatedJsonData);
 
+            file_put_contents(database_path('json'.date('Y-m-d-H-i-s').'json'), $jsonFilePath);
             file_put_contents($jsonFilePath, $updatedJsonData);
 
             if (json_last_error() !== JSON_ERROR_NONE) {
