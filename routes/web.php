@@ -28,11 +28,11 @@ Route::namespace('DataCenter')->prefix('data-center')->name('data-center.')->gro
     #Dcim
     Route::namespace('Dcim')->prefix('dcim')->name('dcim.')->group(function () {
 
-        Route::get('manufacturer',[\App\Http\Controllers\DataCenter\Dcima\ManufacturerController::class, 'index'])->name('manufacturer.index');
+        Route::get('manufacturer',[\App\Http\Controllers\DataCenter\Dcim\ManufacturerController::class, 'index'])->name('manufacturer.index');
 
         Route::namespace('Interfaces')->prefix('interfaces')->name('interfaces.')->group(function () {
-            Route::get('/device', [\App\Http\Controllers\DataCenter\Dcima\Interfaces\DeviceController::class, 'index'])->name('device.index');
-            Route::get('/device/{device}', [\App\Http\Controllers\DataCenter\Dcima\Interfaces\DeviceController::class, 'show'])->name('device.show');
+            Route::get('/device', [\App\Http\Controllers\DataCenter\Dcim\Interfaces\DeviceController::class, 'index'])->name('device.index');
+            Route::get('/device/{device}', [\App\Http\Controllers\DataCenter\Dcim\Interfaces\DeviceController::class, 'show'])->name('device.show');
         });
     });
 

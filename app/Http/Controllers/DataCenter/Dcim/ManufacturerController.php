@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\DataCenter\Dcima;
+namespace App\Http\Controllers\DataCenter\Dcim;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreManufacturerRequest;
