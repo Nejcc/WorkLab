@@ -7,6 +7,7 @@ namespace App\Http\Controllers;
 use App\Models\DataCenter\Dcim\Device;
 use App\Models\DataCenter\Dcim\Interfaces\DeviceInterface;
 use App\Models\DataCenter\Dcim\Manufacturer;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -32,6 +33,60 @@ final class ImportController extends Controller
     public function import()
     {
         return view('import');
+    }
+
+    public function edit_pins(Request $request)
+    {
+        $updatedJsonData = $request->input('json_pins');
+
+//        dd($updatedJsonData);
+
+//        $jsonFilePath = file_get_contents(database_path('apps.json'));
+        $jsonFilePath = database_path('apps.json');
+
+//        dd($jsonFilePath);
+
+//        file_put_contents($jsonFilePath, $updatedJsonData);
+
+        try {
+            // Step 1: Retrieve the JSON data
+            if (!file_exists($jsonFilePath)) {
+                throw new \Exception("The file does not exist: $jsonFilePath");
+            }
+
+            $jsonData = file_get_contents($jsonFilePath);
+            if ($jsonData === false) {
+                throw new \Exception("Failed to read the file: $jsonFilePath");
+            }
+
+//            // Step 2: Decode the JSON data
+//            $data = json_decode($jsonData, true); // Passing true converts it into an associative array
+
+            if (json_last_error() !== JSON_ERROR_NONE) {
+                throw new \Exception("Invalid JSON data: " . json_last_error_msg());
+            }
+
+
+//            $updatedJsonData = json_encode($updatedJsonData);
+
+            file_put_contents($jsonFilePath, $updatedJsonData);
+
+            if (json_last_error() !== JSON_ERROR_NONE) {
+                throw new \Exception("Error encoding data to JSON: " . json_last_error_msg());
+            }
+
+            // Step 5: Save the updated JSON
+            if (file_put_contents($jsonFilePath, $updatedJsonData) === false) {
+                throw new \Exception("Failed to write the updated data back to the file: $jsonFilePath");
+            }
+
+//            dd(1);
+
+            echo "JSON data updated successfully.";
+            return redirect()->back();
+        } catch (Exception $e) {
+            echo "Error: " . $e->getMessage();
+        }
     }
 
     public function parse_import(Request $request)

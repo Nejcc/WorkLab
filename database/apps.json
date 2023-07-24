@@ -37,7 +37,7 @@
             "description": "Self-hosted network-wide ad blocker for protecting devices from ads & trackers."
         },
         {
-            "name": "IPMI",
+            "name": "IPMI test",
             "url": "https://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface",
             "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/IPMI_logo.svg/1200px-IPMI_logo.svg.png",
             "tags": ["network"],

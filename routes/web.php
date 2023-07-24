@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
 Route::get('/import', [App\Http\Controllers\ImportController::class, 'import'])->name('import');
 Route::post('/import', [App\Http\Controllers\ImportController::class, 'parse_import'])->name('import.parse_import');
+Route::post('/import/edit-pins', [App\Http\Controllers\ImportController::class, 'edit_pins'])->name('edit.pins');
 
 
 Route::get('/software/install', [App\Http\Controllers\WelcomeController::class, 'install'])->name('software.install');
