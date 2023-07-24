@@ -2,7 +2,7 @@
 
 
 
-namespace  App\Http\Controllers\DataCenter\Dcim\Interfaces;
+namespace  App\Http\Controllers\DataCenter\Dcima\Interfaces;
 
 
 use App\Http\Controllers\Controller;
