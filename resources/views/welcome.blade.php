@@ -67,7 +67,7 @@
     <div class="container-xl">
         <div class="row mb-5">
             <div class="col-lg-2">
-                <a href="{{ route('data-center.dcim.interfaces.device.index') }}">
+                <a href="{{ route('data-center.organization.tenancy.tenants.index') }}">
                     <div class="card p-0 m-0">
                         <div class="empty p-5">
                             <p class="empty-title">{{ \App\Models\DataCenter\Organization\Tenancy\Tenant::count() }}</p>
