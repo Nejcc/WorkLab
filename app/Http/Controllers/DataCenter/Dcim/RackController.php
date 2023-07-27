@@ -3,19 +3,61 @@
 namespace App\Http\Controllers\DataCenter\Dcim;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreRackRequest;
-use App\Http\Requests\UpdateRackRequest;
 use App\Models\DataCenter\Dcim\Rack;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Response;
+use Illuminate\Http\Request;
 
 class RackController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        return view('data-center.dcim.rack.index');
+        $racks = Rack::all();
+        return view('data-center.dcim.rack.index', compact('racks'));
+    }
+
+    public function create()
+    {
+        return view('racks.create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            // Add validation rules for the input fields here
+        ]);
+
+        Rack::create($request->all());
+
+        return redirect()->route('racks.index')->with('success', 'Rack created successfully.');
+    }
+
+    public function show(Rack $rack)
+    {
+        return view('data-center.dcim.rack.show', compact('rack'));
+    }
+
+    public function edit($id)
+    {
+        $rack = Rack::findOrFail($id);
+        return view('racks.edit', compact('rack'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            // Add validation rules for the input fields here
+        ]);
+
+        $rack = Rack::findOrFail($id);
+        $rack->update($request->all());
+
+        return redirect()->route('racks.index')->with('success', 'Rack updated successfully.');
+    }
+
+    public function destroy($id)
+    {
+        $rack = Rack::findOrFail($id);
+        $rack->delete();
+
+        return redirect()->route('racks.index')->with('success', 'Rack deleted successfully.');
     }
 }

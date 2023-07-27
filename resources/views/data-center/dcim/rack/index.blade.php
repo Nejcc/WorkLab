@@ -28,60 +28,53 @@
 @section('content')
     <div class="container-xl">
         <div class="row mb-5">
-            @foreach([[1=>1]] as $rack)
-                <div class="col-3">
-                    <div class="rack">
-                        <div class="rack-unit" data-unit="1U">Power suply</div>
-                        <div class="rack-unit" data-unit="2U">2U</div>
-                        <div class="rack-unit" data-unit="3U">3U</div>
-                        <div class="rack-unit" data-unit="4U">4U</div>
-                        <!-- Add more rack units as needed -->
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Racks</div>
                     </div>
-
-                    <div class="rack">
-                        <div class="unit">
-                            <div class="number">1</div>
-                            <div class="name">Server A</div>
-                            <div class="status on">ON</div>
-                        </div>
-                        <div class="unit">
-                            <div class="number">2</div>
-                            <div class="name">Patch Panel 1</div>
-                            <div class="status off">OFF</div>
-                        </div>
-                        <div class="unit">
-                            <div class="number">3</div>
-                            <div class="name">Switch B</div>
-                            <div class="status on">ON</div>
-                        </div>
-                        <div class="unit">
-                            <div class="number">3</div>
-                            <div class="name">Switch B</div>
-                            <div class="status on">ON</div>
-                        </div>
-                        <div class="unit">
-                            <div class="number">3</div>
-                            <div class="name">Switch B</div>
-                            <div class="status on">ON</div>
-                        </div>
-                        <div class="unit">
-                            <div class="number">3</div>
-                            <div class="name">Switch B</div>
-                            <div class="status on">ON</div>
-                        </div><div class="unit">
-                            <div class="number">10</div>
-{{--                            <div class="name"></div>--}}
-{{--                            <div class="status on"></div>--}}
-                        </div>
-
-
-                        <!-- Add more units here -->
+                    <div class="card-body p-0">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+{{--                                <th>Slug</th>--}}
+                                <th>Site ID</th>
+                                <th>Location ID</th>
+                                <th>Status</th>
+{{--                                <th>Description</th>--}}
+                                <th>Serial Number</th>
+{{--                                <th>Asset Tag</th>--}}
+                                <th>Utilization</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($racks as $rack)
+                                <tr>
+                                    <td>{{ $rack->id }}</td>
+                                    <td><a href="{{ route('data-center.dcim.rack.show', $rack->id) }}">{{ $rack->name }}</a></td>
+{{--                                    <td>{{ $rack->slug }}</td>--}}
+                                    <td>{{ $rack->site_id }}</td>
+                                    <td>{{ $rack->location_id }}</td>
+                                    <td>{{ $rack->status }}</td>
+{{--                                    <td>{{ $rack->description }}</td>--}}
+                                    <td>{{ $rack->serial_number }}</td>
+{{--                                    <td>{{ $rack->asset_tag }}</td>--}}
+                                    <td width="300">
+                                        <div class="progress progress-bar-striped" style="height: 30px; width: 100%;">
+                                            <div class="progress-bar bg-green overflow-visible " style="width: {{ $rack->location_id }}%;" role="progressbar" aria-valuenow="{{ $rack->location_id }}" aria-valuemin="0" aria-valuemax="100" aria-label="{{ $rack->location_id }}% Utilization">
+                                                <span class="visually-show">{{ $rack->location_id }}%</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
                     </div>
-
-
                 </div>
-
-            @endforeach
+            </div>
         </div>
     </div>
 @endsection

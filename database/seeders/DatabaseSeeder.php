@@ -32,6 +32,7 @@ final class DatabaseSeeder extends Seeder
             PlatformSeeder::class,
             TenantSeeder::class,
             TenantGroupSeeder::class,
+            RackSeeder::class,
         ]);
     }
 }

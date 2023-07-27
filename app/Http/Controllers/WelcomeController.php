@@ -35,4 +35,9 @@ final class WelcomeController extends Controller
 
         return view('installation', compact('dashboard'));
     }
+
+    public function qrh()
+    {
+        return view('qrh');
+    }
 }
