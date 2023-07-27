@@ -32,6 +32,7 @@ Route::namespace('DataCenter')->prefix('data-center')->name('data-center.')->gro
     Route::namespace('Dcim')->prefix('dcim')->name('dcim.')->group(function () {
 
         Route::get('manufacturer',[\App\Http\Controllers\DataCenter\Dcim\ManufacturerController::class, 'index'])->name('manufacturer.index');
+        Route::get('rack',[\App\Http\Controllers\DataCenter\Dcim\RackController::class, 'index'])->name('rack.index');
 
         Route::namespace('Interfaces')->prefix('interfaces')->name('interfaces.')->group(function () {
             Route::get('/device', [\App\Http\Controllers\DataCenter\Dcim\Interfaces\DeviceController::class, 'index'])->name('device.index');

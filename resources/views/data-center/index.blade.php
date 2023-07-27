@@ -90,12 +90,24 @@
 
             <!-- row 2 -->
             <div class="col-lg-2 mb-3">
+                <a href="{{ route('data-center.organization.tenancy.tenants.index') }}">
                 <div class="card p-0 m-0">
                     <div class="empty p-5">
                         <p class="empty-title">{{ App\Models\DataCenter\Dcim\Interfaces\DeviceInterface::count() }}</p>
                         <p class="empty-subtitle text-muted">Device Interfaces</p>
                     </div>
                 </div>
+                </a>
+            </div>
+            <div class="col-lg-2 mb-3">
+                <a href="{{ route('data-center.dcim.rack.index') }}">
+                <div class="card p-0 m-0">
+                    <div class="empty p-5">
+                        <p class="empty-title">{{ App\Models\DataCenter\Dcim\Rack::count() }}</p>
+                        <p class="empty-subtitle text-muted">Racks</p>
+                    </div>
+                </div>
+                </a>
             </div>
 
         </div>
