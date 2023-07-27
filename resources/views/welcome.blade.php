@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('header')
-    <div class="page-header d-print-none mb-5">
+    <div class="page-header d-print-none">
         <div class="container-xl">
             <div class="row g-2 align-items-center">
                 <div class="col">
@@ -65,68 +65,6 @@
 @endsection
 @section('content')
     <div class="container-xl">
-        <div class="row mb-5">
-            <div class="col-lg-2">
-                <a href="{{ route('data-center.organization.tenancy.tenants.index') }}">
-                    <div class="card p-0 m-0">
-                        <div class="empty p-5">
-                            <p class="empty-title">{{ \App\Models\DataCenter\Organization\Tenancy\Tenant::count() }}</p>
-                            <p class="empty-subtitle text-muted">Tenant</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2">
-                <a href="{{ route('data-center.organization.tenancy.tenants.index') }}">
-                    <div class="card p-0 m-0">
-                        <div class="empty p-5">
-                            <p class="empty-title">{{ \App\Models\DataCenter\Organization\Tenancy\TenantGroup::count() }}</p>
-                            <p class="empty-subtitle text-muted">Tenant Group</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2">
-                <a href="{{ route('data-center.dcim.interfaces.device.index') }}">
-                    <div class="card p-0 m-0">
-                        <div class="empty p-5">
-                            <p class="empty-title">{{ \App\Models\DataCenter\Dcim\Device::count() }}</p>
-                            <p class="empty-subtitle text-muted">Devices</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2">
-                <a href="{{ route('data-center.dcim.manufacturer.index') }}">
-                    <div class="card p-0 m-0">
-                        <div class="empty p-5">
-                            <p class="empty-title">{{ \App\Models\DataCenter\Dcim\Manufacturer::count() }}</p>
-                            <p class="empty-subtitle text-muted">Manufacturer</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-
-            <div class="col-lg-2">
-                <a href="{{ route('data-center.organization.tenancy.tenants.index') }}">
-                    <div class="card p-0 m-0">
-                        <div class="empty p-5">
-                            <p class="empty-title">{{ \App\Models\DataCenter\Organization\Tenancy\TenantGroup::count() }}</p>
-                            <p class="empty-subtitle text-muted">Tenant Group</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-2">
-                <div class="card p-0 m-0">
-                    <div class="empty p-5">
-                        <p class="empty-title">{{ \App\Models\DataCenter\Organization\Tenancy\TenantGroup::count() }}</p>
-                        <p class="empty-subtitle text-muted">Tenant Group</p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row my-5">
             @foreach($dashboard as $key => $data)
                 @if (count($data) == 0)

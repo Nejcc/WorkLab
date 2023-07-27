@@ -26,6 +26,8 @@ Route::post('/import/edit-pins', [App\Http\Controllers\ImportController::class, 
 Route::get('/software/install', [App\Http\Controllers\WelcomeController::class, 'install'])->name('software.install');
 
 Route::namespace('DataCenter')->prefix('data-center')->name('data-center.')->group(function () {
+
+    Route::get('/',[\App\Http\Controllers\DataCenter\DatacenterController::class, 'index'])->name('index');
     #Dcim
     Route::namespace('Dcim')->prefix('dcim')->name('dcim.')->group(function () {
 

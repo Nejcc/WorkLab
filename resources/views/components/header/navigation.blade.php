@@ -35,6 +35,9 @@
                         <div class="dropdown-menu">
                             <div class="dropdown-menu-columns">
                                 <div class="dropdown-menu-column">
+                                    <a class="dropdown-item" href="{{ route('data-center.index') }}">
+                                        Dashboard
+                                    </a>
                                     <a class="dropdown-item" href="{{ route('data-center.organization.index') }}">
                                         Organizations
                                     </a>
