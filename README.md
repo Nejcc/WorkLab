@@ -1,13 +1,13 @@
 
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_laravelplus&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Nejcc_laravelplus)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_laravelplus&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=Nejcc_laravelplus)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_laravelplus&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Nejcc_laravelplus)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_laravelplus&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Nejcc_laravelplus)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_laravelplus&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Nejcc_laravelplus)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_laravelplus&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Nejcc_laravelplus)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_laravelplus&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=Nejcc_laravelplus)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_laravelplus&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Nejcc_laravelplus)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_WorkLab&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Nejcc_WorkLab)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_WorkLab&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=Nejcc_WorkLab)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_WorkLab&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Nejcc_WorkLab)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_WorkLab&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=Nejcc_WorkLab)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_WorkLab&metric=bugs)](https://sonarcloud.io/summary/new_code?id=Nejcc_WorkLab)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_WorkLab&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=Nejcc_WorkLab)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_WorkLab&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=Nejcc_WorkLab)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_WorkLab&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Nejcc_WorkLab)
 
 # WorkLab - Network Infrastructure Management Tool
 
