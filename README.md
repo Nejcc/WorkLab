@@ -9,19 +9,41 @@
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_laravelplus&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=Nejcc_laravelplus)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Nejcc_laravelplus&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=Nejcc_laravelplus)
 
-## About LaravelPlus
+# WorkLab - Network Infrastructure Management Tool
 
-Introducing our pre-configured Laravel framework, designed to help developers get up and running with Laravel quickly and easily. Our pre-configured Laravel framework comes with all the essential features and components you need to start building web applications with Laravel right away.
+![WorkLab Logo](link_to_your_logo.png)
 
-We've taken care of all the setup and configuration for you, so you can focus on developing your web application without having to worry about the technical details. Our pre-configured Laravel framework includes pre-built authentication and authorization components, as well as pre-configured database connections, middleware, and routing.
+## Overview
 
-With our pre-configured Laravel framework, you can jumpstart your web application development without having to spend hours configuring and setting up Laravel. Our framework is built with best practices in mind and is constantly updated to ensure compatibility with the latest version of Laravel.
+WorkLab is an open-source web application designed to simplify the management and documentation of computer networks and related infrastructure. It provides network engineers and administrators with a centralized platform to keep track of IP addresses, devices, racks, cables, circuits, and more.
 
-Whether you're a beginner or an experienced developer, our pre-configured Laravel framework is a great starting point for your web application development projects. Try it out today and see how it can help streamline your development process and speed up your time to market.
+## Key Features
+
+- IP Address Management (IPAM): Efficiently manage IP space and avoid conflicts.
+- Device Inventory: Organize and document network devices with detailed information.
+- Rack and Data Center Management: Visualize and manage devices in racks and data centers.
+- Circuit Management: Track and document network circuits and their connectivity.
+- Power and Power Feeds: Record power connections for devices in data centers.
+- Integration and Automation: API for integration with other tools and custom workflows.
+- User Roles and Permissions: Granular control over user access and permissions.
+
+## Installation
+
+Follow the instructions in the [Installation Guide](link_to_installation_guide.md) to set up WorkLab in your environment.
+
+## Usage
+
+Check out the [User Guide](link_to_user_guide.md) to learn how to use WorkLab effectively.
 
 ## Contributing
-Thank you for considering contributing to the Laravel framework! Our project is built on the support and contributions of developers like you, and we're always looking for new contributors to help us make Laravel even better.
+
+We welcome contributions to WorkLab! If you find any issues or have new features to propose, please see our [Contribution Guidelines](link_to_contribution_guidelines.md) for details.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+WorkLab is open-source software licensed under the [MIT License](link_to_license.md).
+
+## Contact
+
+If you have any questions or need support, feel free to reach out to us at [info@labstasy.com](mailto:contact@example.com).
+
